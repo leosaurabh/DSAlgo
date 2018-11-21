@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/DSAlgo.iml" filepath="$PROJECT_DIR$/.idea/DSAlgo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/DSAlgo.iml" filepath="$PROJECT_DIR$/src/DSAlgo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DSAlgo1.iml" filepath="$PROJECT_DIR$/DSAlgo1.iml" />
     </modules>
   </component>
 </project>
