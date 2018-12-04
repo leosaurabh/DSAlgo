@@ -1,7 +1,7 @@
 /**
  * Created by ss030277 on 4/30/15.
  */
-public class Tree {
+public class TreeOld {
 
     public static Node getTree() {
 //                    4

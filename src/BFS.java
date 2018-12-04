@@ -5,7 +5,7 @@ public class BFS {
 
     public static void main(String args[]) {
         Queue queue = new Queue();
-        Node root = Tree.getTree();
+        Node root = TreeOld.getTree();
         int toFind = 4;
 
         if (root.value == toFind) {

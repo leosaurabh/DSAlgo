@@ -4,7 +4,7 @@
 public class CommonAncestorBinary {
 
     public static void main(String args[]) {
-        System.out.println(findAncestor(Tree.getTree(), 1, 7).value);
+        System.out.println(findAncestor(TreeOld.getTree(), 1, 7).value);
     }
 
     private static Node findAncestor(Node node, int start, int end) {

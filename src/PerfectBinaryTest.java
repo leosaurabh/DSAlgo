@@ -7,7 +7,7 @@ import java.util.List;
 public class PerfectBinaryTest {
 
     public static void main(String args[]) {
-        Node root = Tree.getTree();
+        Node root = TreeOld.getTree();
 
         Queue queue = new Queue();
         queue.enQueue(root);

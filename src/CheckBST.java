@@ -4,7 +4,7 @@
 public class CheckBST {
 
     public static void main(String args[]) {
-        Node root = Tree.getTree();
+        Node root = TreeOld.getTree();
 
         Stack stack = new Stack();
         Node current = root;

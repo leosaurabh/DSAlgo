@@ -1,4 +1,4 @@
-package newcode;
+
 
 class MedianTwoSortedArrayWithoutExtraMemory {
 

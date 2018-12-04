@@ -5,7 +5,7 @@ public class DFS {
 
     public static void main(String args[]) {
         Stack stack = new Stack();
-        Node root = Tree.getTree();
+        Node root = TreeOld.getTree();
         int toFind = 4;
 
         if (root.value == toFind) {

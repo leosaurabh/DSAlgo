@@ -1,14 +1,14 @@
-package newcode;
 
-public class FullBinary {
+
+public class DegenerateBinary {
 
     public static void main(String args[]) {
-        System.out.println(check(Tree.createFullBT()));
+        System.out.println(check(Tree.createDegenerateBT()));
     }
 
     private static boolean check(Tree node) {
         if (node != null) {
-            if ((node.left == null && node.right != null) || (node.left != null && node.right == null)) {
+            if (node.left != null && node.right != null) {
                 return false;
             }
             return check(node.left) && check(node.right);
@@ -16,7 +16,4 @@ public class FullBinary {
             return true;
         }
     }
-
-//    f (left, d)
-//    f  (right, d)
 }

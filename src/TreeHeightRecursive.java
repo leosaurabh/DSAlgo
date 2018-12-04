@@ -4,7 +4,7 @@
 public class TreeHeightRecursive {
 
     public static void main(String args[]) {
-        Node root = Tree.getTree();
+        Node root = TreeOld.getTree();
         System.out.println(height(root));
     }
 

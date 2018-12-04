@@ -3,7 +3,7 @@
  */
 public class InOrderIterative {
     public static void main(String args[]) {
-        Node root = Tree.getTree();
+        Node root = TreeOld.getTree();
         Stack stack = new Stack();
         Node current = root;
         int depth = 0;
