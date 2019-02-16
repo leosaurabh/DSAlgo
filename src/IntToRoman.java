@@ -15,7 +15,7 @@ public class IntToRoman {
     };
 
     public static void main(String args[]) {
-        System.out.println(intToRoman(999));
+        System.out.println(intToRoman(3901));
     }
 
     private static String intToRoman(int num) {
@@ -25,7 +25,7 @@ public class IntToRoman {
 
         int ct = 0;
         while ((num/(int) Math.pow(10, ++ct)) != 0);
-        int factor = (int) Math.pow(10, ct-1);
+        int factor = (ct <= 3) ? (int) Math.pow(10, ct-1) : (int) Math.pow(10, 2);
 
         StringBuilder build = new StringBuilder();
         LinkedList<Integer> keys = new LinkedList<Integer>(map.keySet());
@@ -40,7 +40,7 @@ public class IntToRoman {
         }
         if (start == 0 && end == 0) {
             start = 1000;
-            end = 4000;
+            end = 5000;
         }
 
         convert(start, end, factor, num, build);
@@ -50,10 +50,15 @@ public class IntToRoman {
     private static void convert(int start, int end, int factor, int num, StringBuilder build) {
         if (end - num <= factor) {
             int overflow = factor - end + num;
-            if (overflow != 0)
+            if (overflow >= 0)
                 build.append(map.get(factor)).append(map.get(end)).append(intToRoman(overflow));
-            else
-                build.append(map.get(factor)).append(map.get(end));
+            else {
+                if (end != 4000) {
+                    build.append(map.get(factor)).append(map.get(end));
+                } else {
+                    build.append(map.get(start)).append(intToRoman(num - start));
+                }
+            }
         } else {
             int overflow = num - start;
             if (overflow != 0)

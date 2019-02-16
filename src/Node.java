@@ -93,4 +93,23 @@ public class Node implements Serializable{
 
         return root;
     }
+
+    public static Node oneMistakeBST() {
+        //                    4
+        //            6               2
+        //        1       3       5       7
+        Node root = new Node(4);
+        root.left = new Node(6);
+        root.right = new Node(2);
+
+        Node left = root.left;
+        left.left = new Node(1);
+        left.right = new Node(3);
+        //
+        Node right = root.right;
+        right.left = new Node(5);
+        right.right = new Node(7);
+
+        return root;
+    }
 }

@@ -12,14 +12,14 @@ public class IterativePreOrder {
 
         while(!stack.isEmpty()) {
             Node node = stack.peek();
-            if (prev == null || prev.left == node || prev.right == node) {
+            if (prev == null || prev.left == node || prev.right == node) { //going down
                 System.out.println(node.value);
                 if (node.left != null) {
                     stack.push(node.left);
                 } else if (node.right != null) {
                     stack.push(node.right);
                 }
-            } else if (node.left == prev) {
+            } else if (node.left == prev) { //going up
                 if (node.right != null) {
                     stack.push(node.right);
                 }

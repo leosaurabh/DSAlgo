@@ -44,4 +44,16 @@ public class MaxSumSubArray {
             toCopy.add(fromInt);
         }
     }
+
+    private static int maxSubArray(Integer arr[]) {
+        int sum = Integer.MIN_VALUE;
+        int maxSum = 0;
+
+        for (int i=0; i<arr.length; i++) {
+            sum = arr[i] > sum + arr[i] ? arr[i] : sum + arr[i];
+            maxSum = sum > maxSum ? sum : maxSum;
+        }
+
+        return maxSum;
+    }
 }
